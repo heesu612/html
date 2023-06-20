@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>테이블 응용</title>
+        <style>
+            table{
+                width : 800px;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            tr{
+                height: 30px;
+            }
+            th, td{
+                border: 1px solid black;
+            }
+            th{
+                font-weight: normal;
+            }
+            td{
+                text-align: right;
+            }
+            figcaption {
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Quiz 2번</h1>
+        <table>
+            <!-- 테이블에서 열단위의 작업을 할때 사용-->
+            <colgroup>
+                <col>
+                <col>
+                <col span="3"style="background-color: yellow;">
+            </colgroup>
+            <tr>
+                <th width="16%">구분</th>
+                <th width="17%">2016년</th>
+                <th width="17%">2017년</th>
+                <th width="17%">2018년</th>
+                <th width="17%">2019년</th>
+                <th width="16%">합계</th>
+            </tr>
+            <tr>
+                <th>사이버명예훼손</th>
+                <td>14,908</td>
+                <td>13,348</td>
+                <td>15,926</td>
+                <td>16,623</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>사이버도박</th>
+                <td>9,538</td>
+                <td>5,130</td>
+                <td>3,012</td>
+                <td>5,346</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>사이버음란물</th>
+                <td>3,777</td>
+                <td>2,646</td>
+                <td>3,883</td>
+                <td>2,690</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>사이버스토킹</th>
+                <td>56</td>
+                <td>59</td>
+                <td>60</td>
+                <td>25</td>
+                <td></td>
+            </tr>
+        </table>
+        <figcaption>사이버 범죄 발생 현황(단위 : 건)</figcaption>
+    </body>
+</html>
