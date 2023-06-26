@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과 1번</title>
+    <style>
+        /* transition 효과 1 */ 
+        #b1 { 
+            width: 200px; height: 50px;
+            background-color: skyblue;
+            transition: width 5s, height 5s, background-color 5s;
+        }
+        #b1:hover { width: 500px; height: 100px; background-color: green;}
+
+        /* transition 효과 2 */
+        .box { 
+            width: 100px; height: 30px;
+            background-color: gray; 
+            margin: 5px;
+            text-align: center; line-height: 30px;
+            
+            /* 1번 방식 - 각각 적는 방법 */
+            /*transition-property: width;
+            transition-duration: 5s;
+            transition-delay: 1s;
+            transition-timing-function: linear;*/
+            /* 2번 방식 - 한꺼번에 적는 방법 */
+            transition: width 5s 1s linear;
+        }
+        #b2:hover { width: 150px;}
+        #b3:hover { width: 200px;}
+        #b4:hover { width: 300px;}
+        #b5:hover { width: 400px;}
+        #b6:hover { width: 500px;}
+    </style>
+</head>
+<body>
+    <div id="b1"></div>
+    <hr>
+    <div id="b2" class="box">Level 1</div>
+    <div id="b3" class="box">Level 2</div>
+    <div id="b4" class="box">Level 3</div>
+    <div id="b5" class="box">Level 4</div>
+    <div id="b6" class="box">Level 5</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 속성 추가 9번</title>
+    <style>
+        /* 그라데이션 4번 - 선형, 원형 그라데이션 반복 */
+        div { 
+            width: 500px; height: 300px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+        .gradient1 { 
+            background: repeating-linear-gradient(yellow, red 20px);
+        }
+        .gradient2 { 
+            background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);
+        }
+        .gradient3 { 
+            background: repeating-radial-gradient(circle, white, red 10%);
+        }
+        .gradient4 { 
+            background: repeating-radial-gradient(circle, white, white 10%, red 10%, red 20%);
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient1"></div>
+    <div class="gradient2"></div>
+    <div class="gradient3"></div>
+    <div class="gradient4"></div>
+</body>
+</html>

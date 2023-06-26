@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>조건문 1번</title>
+    </head>
+    <body>
+        <h3>조건문 1번</h3>
+        <script>
+            // 1. if문 : 조건의 결과가 1개일 때75
+            // 문제 1) 점수가 80점이상일 떼, "시험을 통화하였습니다."라는 메시지를 출력하도록 하시오.
+            // 입력함수를 통해서 점수를 입력받고, 화면을 통해서 결과를 출력하도록 변경.
+            /*
+            let score = prompt("점수를 입력하세요.",0);
+            if(score >= 80) {
+                document.write("시험을 통과하였습니다.");
+            }
+            */
+
+
+            // 2. if ~ else문 : 조건의 결과가 2개일 때
+            // 문제2) 점수가 80점이상일 때, "합격입니다."라는 메시지를 출력하고,
+            // 80점 미만일 때는 "불합격입니다."라는 메시지를 출력하도록 하시오.
+            /*
+            let score2 = prompt("점수를 입력하세요.",0);
+            if (score2>=80) {
+                alert("합격입니다.");
+            } else {
+                alert("불합격입니다.");
+            }
+            */
+
+
+            // 3. if ~ else if ~ else : 조건의 결과가 3개일 때
+            // 문제3) 점수가 90점 이상일때, "최우수", 80점 이상일 때 "우수",
+            // 80점 미만일 때는 "보통"이라는 메시지를 출력하도록 하시오.
+            
+            /*
+            let score = prompt("성적을 입력하세요.");
+            if ( score>=90) {
+                alert("최우수");
+            } else if (score >=80) {
+                alert("우수");
+            } else {
+                alert("보통");
+            }
+            */
+
+            // 문제4) 점수가 90점 이상일 때 "A학점", 80점 이상일 때 "B학점",
+            // 70점 이상일 때 "C학점", 60점 이상일 때 "D학점", 60점 미만일 때 "F학점"이라는 메시지 출력 
+            let score = prompt("점수를 입력하세요",0);
+            /*
+            if(score>=90) {
+                document.write("A학점");
+            } else if(score>=80) {
+                document.write("B학점");
+            } else if(score>=70) {
+                document.write("C학점");
+            } else if(score>=60) {
+                document.write("D학점");
+            } else {
+                document.write("F학점");
+            }
+            */
+
+            let grade;
+            if(score>=90) {
+                grade="A학점";
+            } else if(score>=80) {
+                grade="B학점";
+            } else if(score>=70) {
+                grade="C학점";
+            } else if(score>=60) {
+                grade="D학점";
+            } else {
+                grade="F학점";
+            }
+            document.write(grade);
+        </script>
+    </body>
+</html>

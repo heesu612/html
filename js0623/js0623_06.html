@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>형(데이터타입) 변환</title>
+    </head>
+    <body>
+        <h3>자동 형변환, 형변환 함수</h3>
+        <script>
+            console.log(7);
+            console.log("--- 1. 자동 형변환 ---");
+            console.log(7 + null); // 7, 숫자
+            console.log("7" + null); // 7null, 문자열
+            console.log("7" + 2); // 72, 문자열
+            console.log(7 + "2"); // 72, 문자열
+            console.log(7 + "hello") //7hello, 문자열
+            console.log("-----")
+
+            console.log(7 - 2); // 5, 숫자
+            console.log("7" - 2); // 5, 숫자 ( +랑 비교해서 보기 )
+            console.log(7 - "2"); // 5, 숫자
+            console.log("7" - "2"); // 5, 숫자
+            console.log(7 - "two"); // NaN 
+            console.log("-----");
+
+            console.log(7 * 2); // 14, 숫자
+            console.log("7" * 2); // 14, 숫자
+            console.log(7 * "2"); //14, 숫자
+            console.log("7" * "2"); // 14, 숫자
+            console.log("seven" * 2); // NaN
+            console.log("-----")
+
+            console.log(7 / 2); // 3.5, 숫자
+
+
+            console.log("--- 2. 형변환 함수 ---");
+            // 불린형, 숫자형(Number(), parseInt(), parseFloat()), 문자형
+            let num1 = 3.14, num2 = 2, num3 = 100, num4 = 0;
+            let str1 = "58", str2 = "3.678", str3 = "hello"; str4 = "";
+            let b1 = true, b2 = false ;
+
+            console.log(str1 + num1); // "58" + "3.14" -> 583.14, 문자열
+            console.log(str1 - num1); //  58 - 3.14 -> 54.86, 숫자
+
+            console.log(Number(str1) + num1); // 58 + 3.14 -> 61.14, 숫자
+            console.log(parseInt(str1) + num1); // 58 + 3.14 -> 61.14, 숫자
+            console.log(parseFloat(str1) + num1); // 58 + 3.14 -> 61.14, 숫자
+            console.log("-----");
+
+            console.log(str2 + num2); // "3.678" + "2" -> 3.6782, 문자열
+            console.log(str2 - num2); // 3.678 - 2 -> 1.678, 숫자
+
+            console.log(Number(str2) + num2); // 3.678 + 2 -> 5.678, 숫자
+            console.log(parseInt(str2) + num2); // 3 + 2 -> 5, 숫자
+            console.log(parseFloat(str2) + num2); // 3.678 + 2 -> 5.678, 숫자
+            console.log(Number("str3") + num2); // NaN
+            console.log("-----");
+
+            console.log(b1);
+            console.log(typeof b1); // boolean
+            console.log(typeof b1.toString()); // "true", string, 논리값을 문자열로 변경
+            console.log(typeof num1.toString()); // "3.14", string, 숫자를 문자열로 변경
+            console.log(typeof toString(b1)); // "true", string, 논리값을 문자열로 변경
+            console.log(typeof toString(num1)); // "3.14", string, 논리값을 문자열로 변경
+            console.log("-----");
+
+            console.log(typeof num1); // number
+            console.log(Boolean(num1)); //true
+            console.log(typeof num4); // number
+            console.log(Boolean(num4)); // false
+            console.log(typeof str1); // string
+            console.log(Boolean(str1)); // true
+            console.log(Boolean(str4)); //false
+            console.log(Boolean(undefined)); // false
+            console.log(Boolean(null)); // false
+            console.log(Boolean(NaN)); // false
+            
+        </script>
+    </body>
+</html>

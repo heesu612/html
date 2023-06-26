@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 선택자의 종류 3번 </title>
+        <style>
+            li { margin : 20px;}
+            /* 5. 속성 선택자 */
+            /* 
+            a[href] { background: yellow;}
+            a[target="_blank"] { color : red; font-weight: bold;}
+            */
+            /* a[class~="button"] { color : red; } */
+            .u1 a[title|="flat"] { color: orange;}
+            /* ----- */
+            /*
+            .u2 a[title^="eng"] { background-color: yellow;}
+            .u2 a[title$="ce"] { background-color: pink;}
+            */
+            .u2 a[title*="an"] { background-color: purple;}
+        </style>
+    </head>
+    <body>
+        <ul class="u1">
+            <li><a>메인 메뉴 1</a></li>
+            <li><a href="#" target="_blank">메인 메뉴 2</a></li>
+            <li><a href="#" target="_self">메인 메뉴 3</a></li>
+            <li><a href="#" target="_self" class="button" title="flat button">메인 메뉴 4</a></li>
+            <li><a href="#" target="_self" class="flat button" title="flat-button">메인 메뉴 5</a></li>
+        </ul>
+        <hr>
+        <ul class="u2">
+            <li>외국어 서비스</li>
+            <li><a href="#" title="english">영어</a></li>
+            <li><a href="#" title="japan">일본어</a></li>
+            <li><a href="#" title="china">중국어</a></li>
+            <li><a href="#" title="france">프랑스어</a></li>
+        </ul>
+    </body>
+</html>

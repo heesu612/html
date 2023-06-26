@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>typeof 연산자와 데이터 타입</title>
+    </head>
+    <body>
+        <h3>typeof 연산자</h3>
+        <script>
+            console.log("--- 1. typeof 연산자와 데이터 타입 ---");
+            console.log(typeof "join"); // string
+            console.log(typeof ""); // string
+            console.log(typeof 0); // number
+            console.log(typeof 13); // number
+            console.log(typeof -13); // number
+            console.log(typeof 3.14); // number
+            console.log(typeof -7.7); // number
+            console.log(typeof true); // boolean
+            console.log(typeof false); // boolean
+            console.log(typeof NaN); // number
+            console.log(typeof undefined); // undefined
+            console.log(typeof null); // object, 객체형
+            console.log(typeof [1, 2, 3, 4, 5]); // object, 배열도 객체형
+            console.log(typeof function(){}); // 아무내용없는 함수, function(), 함수는 함수형
+            console.log(typeof car); //undefined
+
+            console.log("--- 2. 데이터의 논리값 ---")
+            console.log(Boolean("join")); // true
+            console.log(Boolean("")); // false
+            console.log(Boolean(0)); // false
+            console.log(Boolean(13)); // true
+            console.log(Boolean(-13)); // true
+            console.log(Boolean(3.14)); // true
+            console.log(Boolean(-7.7)); // true
+            console.log(Boolean(true)); // true
+            console.log(Boolean(false)); // false
+            console.log(Boolean(NaN)); // false
+            console.log(Boolean(undefined)); // false
+            console.log(Boolean(null)); // false
+            console.log(Boolean([1, 2, 3, 4, 5])); // true
+            console.log(Boolean(function(){})); // true
+            console.log(Boolean(car)); // error, car는 정의되지 않음.
+        </script>
+    </body>
+</html>

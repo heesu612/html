@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>애니메이션 효과 4번</title>
+        <style>
+            /* transform scale(크기, 확대/축소) */
+            .box {
+                width: 210px; height : 200px;
+                border : 1px solid black;
+                margin : 50px;
+            }
+            .scalex:hover {
+                transform : scaleX(0.5);
+            }
+            .scaley:hover {
+                transform : scaleY(1.5);
+            }
+            .scalexy:hover {
+                transform : scale(1.5, 0.8);
+            }
+            </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="scalex"><img src="images/fruit.jpg"></div>
+        </div>
+        <div class="box">
+            <div class="scaley"><img src="images/fruit.jpg"></div>
+        </div>
+        <div class="box">
+            <div class="scalexy"><img src="images/fruit.jpg"></div>
+        </div>
+    </body>
+</html>

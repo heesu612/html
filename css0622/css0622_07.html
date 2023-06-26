@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>키프레임 애니메이션 2번</title>
+        <style>
+            div { width : 200px; height : 200px; margin : 100px;}
+            .box1 {
+                background-color: green;
+                border : 1px solid black;
+                /* animation 속성 */
+                animation-name : box_shape;
+                animation-duration: 3s;
+                animation-delay : 1s;
+            }
+            /* keyframes 속성 */
+            @keyframes box_shape {
+                from {
+                    border: 2px solid black;
+                }
+                to {
+                    border: 2px solid hotpink;
+                    background-color: orange;
+                    border-radius : 50%;
+                }
+            }
+            /* ----- */
+            .box2 {
+                background-color: darkviolet;
+                border : 1px solid black;
+                /* animation 속성 */
+                animation-name : box_rotate;
+                animation-duration: 5s;
+                animation-delay : 2s;
+            }
+            @keyframes box_rotate {
+                0% {
+                    transform : rotate(0deg);
+                }
+                100% {
+                    transform : rotate(45deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </body>
+</html>

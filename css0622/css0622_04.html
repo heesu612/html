@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>애니메이션 효과 5번</title>
+        <style>
+            /* transform : rotate(회전) */
+            .box {
+                width : 210px; height : 200px;
+                border : 1px solid black;
+                margin : 50px;
+            }
+            .rotate1:hover {
+                transform : rotate(45deg);/* +인경우 오른쪽으로돌고 -인경우 왼쪽으로 돈다.*/
+            }
+            .rotate2:hover {
+                transform : rotateX(45deg); /*회전시키는건데 줄인거처럼 보이는것*/
+            }
+            .rotate3:hover {
+                transform : rotateY(45deg);
+            }
+            .rotate4:hover {
+                transform : rotateZ(45deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="rotate1"><img src="images/fruit.jpg"></div>
+        </div>
+        <div class="box">
+            <div class="rotate2"><img src="images/fruit.jpg"></div>
+        </div>
+        <div class="box">
+            <div class="rotate3"><img src="images/fruit.jpg"></div>
+        </div>
+        <div class="box">
+            <div class="rotate4"><img src="images/fruit.jpg"></div>
+        </div>
+    </body>
+</html>

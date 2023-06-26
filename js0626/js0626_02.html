@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>연산자와 입력함수 활용</title>
+    </head>
+    <body>
+        <h3>연산자와 입력함수 활용</h3>
+        <script>
+            function f1() {
+                let name = prompt("당신의 이름을 입력하세요.");
+                let height = prompt( name + "님의 키를 입력하세요");
+                let weight = prompt( name + "님의 몸무게를 입력하세요");
+
+                if(weight >= ((height - 100) * 0.9) - 5 && weight <= ((height - 100) * 0.9) + 5) {
+                    alert( name + "님은 적정 체중입니다.");
+                } else {
+                    alert( name + "님은 적정 체중이 아닙니다.");
+                }
+            }
+        </script>
+        <button onclick="f1()">적정체중 확인</button>
+
+        <script>
+            function f2() {
+                let name = prompt("당신의 이름을 입력하세요.");
+                let height = prompt("당신의 키를 입력하세요");
+                let weight = prompt("당신의 몸무게를 입력하세요");
+
+                let n_weight = (height - 100) * 0.9;
+                let g_weight = (weight >= n_weight-5) && (weight <= n_weight + 5) ;
+                let result = g_weight ? "적정 체중입니다." : "적정 체중이 아닙니다.";
+
+                document.write(name + "님은" + result);
+            }
+        </script>
+        <button onclick="f2()">적정체중 확인(강사님 코딩)</button>
+
+        
+    </body>
+</html>

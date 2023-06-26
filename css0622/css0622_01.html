@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>애니메이션 효과 2번</title>
+        <style>
+            div { margin: 20px;}
+            .b1 {
+                width: 100px; height: 100px;
+                background-color: blue;
+                border : 1px solid black;
+                /* transition */
+                /* transition-property: width, height;
+                transition-duration: 2s, 1s; */
+
+                transition : width 2s, height 1s;
+            }
+
+            .b1:hover {
+                width : 200px; height: 120px;
+            }
+
+            .b2 {
+                width : 100px; height: 100px;
+                background-color: red;
+                border : 1px solid black;
+                /* transition */
+                transition-property : width, height, background-color, transform;
+                transition-duration: 2s, 3s, 2s, 3s;
+            }
+
+            .b2:hover {
+                width : 200px; height: 200px;
+                background-color: hotpink;
+                transform: rotate(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="b1"></div>
+        <div class="b2"></div>
+    </body>
+</html>

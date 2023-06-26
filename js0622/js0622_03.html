@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>연산자의 활용 2번</title>
+        <style>
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h3>연산자의 활용</h3>
+        <script>
+            let n1 = 15, n2 = 4; //정수
+            let grade1 = 3.8, grade = 4.5, grade = 15.0; //실수
+            let s1 = "Javascript", s2 = "Programming", s3 = "80"; //문자열
+
+            console.log("--- 1. 산술 연산자 ---")
+            console.log(n1 + n2); // 19,덧셈
+            console.log(n1 - n2); // 11,뺄셈
+            console.log(n1 * n2); // 60,곱셈, asterisk
+            console.log(n1 / n2); // 3.75,나눗셈 -> 소수점을 포함한 결과
+            console.log(n1 % n2); // 3,나머지 -> 나누었을 때 몫이 아니라 나머지
+
+            console.log("--- 2. 증감 연산자 ---") //증가(++), 감소(--), 전위, 후위
+            // ++ : 변수의 값을 1증가, -- : 변수의 값을 1감소
+            // 전위 : 변수의 값을 먼저 증가, 후위 : 변수의 값을 대입하고 난 다음에 증가
+            console.log(n1++ + 30); // 45 , 15 + 30
+            console.log(++n1 + 30); // 46 , 16 + 30
+
+            console.log(--n2 + 10); // 13, 3 + 10
+            console.log(n2-- + 10); // 14, 4 + 10
+
+            // = : 대입 연산자, let n1 = 10; <- n1이라는 변수에 10이라는 정수값을 넣는 것.(대입하는 것)
+            // == : 비교 연산자, 10 == 20; <- 10이라는 값과 20이라는 값이 같은지 물어보는 것.
+            // 비교 연산자의 결과는 반드시 boolean 값이여야 한다. true(T, 맞다), false(F, 아니다)
+            console.log("--- 3. 비교 연산자 ---") // >, >=, <, <=, ==, !=, ===
+            let num1 = 15, num2 = 4, num3 = 15;
+            let g1 = 15.0;
+            let str1 = "15", str2 = "javascrpt";
+            console.log(num1 > num2); // true
+            console.log(num1 >= num2); // true
+            console.log(num1 < num2); // false
+            console.log(num1 <= num2); // false
+            console.log(num1 == num2); // false
+            console.log(num1 != num2); // true
+
+            // === : 값과 함께 타입도 검사하여 둘다 같을 때만, true를 출력
+            console.log(num1 == str1); // true, 숫자 == 문자열, 값만 비교
+            console.log(num1 === str1); // false, 숫자 === 문자열, 값과 타입을 함께 비교
+            console.log(num1 == str2); // NaN -> false
+            
+            let v1;
+
+            int v1;
+
+        </script>
+    </body>
+</html>

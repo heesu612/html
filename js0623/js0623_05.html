@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>변수, 변수의 종류</h3>
+        <script>
+            var x = 50;
+            console.log("x = " + x);
+            var x = 70; // 변수의 중복 선언 허용 : var는 에러가 발생하지 않음 -> 심각한 문제를 야기한다.
+            console.log("x = " + x);
+
+            let y = 30;
+            console.log("y = " + y);
+            // let y = 60; // 변수의 중복 선언 금지 : let은 에러를 발생 -> 심각한 문제를 방지함.
+            console.log("y = " + y);
+            y = 50;
+            console.log("y = " + y);
+
+            const z = 80;
+            // const z; //const 함수는 선언과 동시에 값을 할당해야 함.
+            //z = 80;
+            console.log("z = " + z);
+            // z = 90; // 상수의 값을 재지정하는 것은 에러
+            console.log("z = " + z);
+        </script>
+    </body>
+</html>

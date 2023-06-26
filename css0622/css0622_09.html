@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>선택자의 종류 1번</title>
+        <style>
+            /* 1. 자손 선택자 : 한 칸 띄우기 사용 */
+            /* .container ul { border : 1px dotted blue;} */
+
+            /* 2. 자식 선택자 : > 사용 (바로 밑에 하나만 선택하는것)*/
+            /* .container>ul { border: 1px dotted red;} */
+
+            /* 3. */
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>예약 방법 및 요금</h1>
+            <p>방을 예약하려면?</p>
+            <ul>
+                <li>
+                    예약 방법
+                    <ul>
+                        <li>직접 통화</li>
+                        <li>문자 남기기</li>
+                    </ul>
+                </li>
+                <li>
+                    요금
+                    <ul>
+                        <li>1인 : 40,000원</li>
+                        <li>2인 : 60,000원</li>
+                        <li>3인 : 80,000원</li>
+                        <li>4인 : 100,000원</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

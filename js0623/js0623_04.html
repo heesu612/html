@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>데이터타입 응용</title>
+    </head>
+    <body>
+        <h3>데이터타입 응용</h3>
+        <script>
+            console.log("--- 1. string(문자열) ---");
+            let s1 = "Web Programming";
+            let s2 = "서울대학교 '컴퓨터공학' 전공";
+            let s3 = 'Javascript "Web" Programming';
+
+            console.log(s1);
+            console.log(s2);
+            console.log(s3);
+            console.log("s1의 길이: "+ s1.length);
+            console.log("s1의 첫번째 문자 : " + s1[0]);
+            console.log("s1의 마지막 문자 : " + s1[s1.length-1]);
+
+            console.log("--- 2. number(숫자) ---");
+            // 지수승 표현
+            let x = 314e-2; // 10의 -2승, 3.14
+            let y = 1234e10; // 10의 10승,12340000000000
+            let n1 = 999999999999999; // 15개
+            let n2 = 9999999999999999; // 16개
+
+            console.log("x = " + x);
+            console.log("y = " + y);
+            console.log("n1 = " + n1);
+            console.log("n2 = " + n2);
+
+            console.log("--- 3. boolean ---"); //!!!!!!!!!!!!!!!!!~~~~~~~~~~~~~~~~아주 중요~~~~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!
+            let num1 = 0, num2 = 23, num3 = -55; // 숫자: 양수, 0, 음수
+            let str1 = "Javascript", str2 = ""; // 문자열: 내용이 있는 문자열, 빈 문자열
+            let obj1, obj2 = null, obj3 = new Object(); // undefined, null, object
+
+            console.log(num1); // 0
+            console.log(typeof num1); // number
+            console.log(Boolean(num1)); // 0 -> false
+            console.log(Boolean(num2)); // 23, 양수 -> true
+            console.log(Boolean(num3)); //  -55, 음수 -> true
+
+            console.log(Boolean(str1)); // 내용이 있는 문자열 -> true
+            console.log(Boolean(str2)); // 빈 문자열 -> false
+            console.log(Boolean(" ")); // 스페이스바가 있으니까 빈문자열이 아니라 true
+            console.log("-----");
+
+            console.log(Boolean(obj1)); // undefined -> false
+            console.log(Boolean(obj2)); // null -> false
+            console.log(Boolean(obj3)); // object(객체) -> true
+            console.log(Boolean(NaN)); // NaN -> false
+        </script>
+    </body>
+</html>

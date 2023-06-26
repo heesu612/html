@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h3>연산자의 활용</h3>
+        <script>
+            let n1 = 15, n2 = 4; //정수
+            let grade1 = 3.8, grade2 = 4.5, grade3 = 15.0; //실수
+            let s1 = "Javascript", s2 = "Programming", s3 = "80"; //문자열
+
+            console.log("--- 1. 산술 연산자 ---")
+            console.log(n1 + n2); // 19,덧셈
+            console.log(n1 - n2); // 11,뺄셈
+            console.log(n1 * n2); // 60,곱셈, asterisk
+            console.log(n1 / n2); // 3.75,나눗셈 -> 소수점을 포함한 결과
+            console.log(n1 % n2); // 3,나머지 -> 나누었을 때 몫이 아니라 나머지
+
+            console.log("--- 2. 증감 연산자 ---") //증가(++), 감소(--), 전위, 후위
+            // ++ : 변수의 값을 1증가, -- : 변수의 값을 1감소
+            // 전위 : 변수의 값을 먼저 증가, 후위 : 변수의 값을 대입하고 난 다음에 증가
+            console.log(n1++ + 30); // 45 , 15 + 30
+            console.log(++n1 + 30); // 46 , 16 + 30
+
+            console.log(--n2 + 10); // 13, 3 + 10
+            console.log(n2-- + 10); // 14, 4 + 10
+
+            // = : 대입 연산자, let n1 = 10; <- n1이라는 변수에 10이라는 정수값을 넣는 것.(대입하는 것)
+            // == : 비교 연산자, 10 == 20; <- 10이라는 값과 20이라는 값이 같은지 물어보는 것.
+            // 비교 연산자의 결과는 반드시 boolean 값이여야 한다. true(T, 맞다), false(F, 아니다)
+            console.log("--- 3. 비교 연산자 ---") // >, >=, <, <=, ==, !=, ===, !==, instanceof
+            let num1 = 15, num2 = 4, num3 = 15;
+            let g1 = 15.0;
+            let str1 = "15", str2 = "javascrpt";
+            console.log(num1 > num2); // true
+            console.log(num1 >= num2); // true
+            console.log(num1 < num2); // false
+            console.log(num1 <= num2); // false
+            console.log(num1 == num2); // false
+            console.log(num1 != num2); // true
+
+            // === : 값과 함께 타입도 검사하여 둘다 같을 때만, true를 출력
+            console.log(num1 == str1); // true, 숫자 == 문자열, 값만 비교
+            console.log(num1 === str1); // false, 숫자 === 문자열, 값과 타입을 함께 비교
+            console.log(num1 == str2); // NaN -> false, 숫자 == 문자열
+            console.log("-----");
+            
+            // !== : ===의 반대 결과, 값과 타입이 모두 같을 때 false, 그 이외의 경우에는 true
+            console.log(num1 !== num2); // true
+            console.log(num1 !== str1); // true
+            console.log(num1 !== str2); // true
+            console.log(str1 !== str2); // true
+            console.log(num1 !== num3); // false
+
+            // &&(논리 AND, 논리곱), ||(논리 OR, 논리합), !(논리 NOT, 논리부정)
+            // && : 양쪽 항의 결과가 모두 참일 때, 전체 결과가 참이 됨.
+            // || : 양쪽 항의 결과 중에서 하나라도 참이 있다면, 전체 결과가 참이 됨.
+            // ! : true를 false, false를 true로 반전시킨다.
+            console.log("--- 4. 논리 연산자 --- ");
+            console.log(num1>num2 && num3>num2); // true
+            console.log(num1>num2 && num3<num2); // false
+            console.log(num1<num2 && num3<num2); // false 
+
+            console.log(num1>num2 || num3>num2); // true
+            console.log(num1>num2 || num3<num2); // true
+            console.log(num1<num2 || num3<num2); // false
+
+            console.log(num1 < num2); // 15 < 4 -> false
+            console.log(!(num1 < num2)); // true, !(15 < 4) -> !false -> true,논리 not은 true를 false로 false를 true로 바꿔줌  
+
+            // 조건선택 연산자 -> ? :
+            // A ? B : C -> A의 결과가 true라면 B를 실행하고, false라면 C를 실행.
+            console.log("--- 5. 조건선택 연산자 ---");
+            let result = num1 > num2 ? num1 : num2 ;
+            console.log("result = " + result);
+
+            // 복합대입 연산자 : +=, -=, *=, /=, %= ...
+            console.log("--- 6. 복합대입 연산자 ---");
+            let sum = 10;
+            sum += 10; // sum = sum + 10
+            console.log("sum = " + sum);
+        </script>
+    </body>
+</html>

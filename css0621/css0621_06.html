@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 속성 추가 3번</title>
+    <style>
+        div { 
+            width: 400px; height: 200px;
+            padding: 35px; margin: 20px;
+            border: 15px solid #ccc;
+            background: url("images/bg3.jpg") no-repeat;
+        }
+        .bg1 { background-origin: padding-box;} /* 기본값 */
+        .bg2 { background-origin: border-box;}
+        .bg3 { background-origin: content-box;}
+    </style>
+</head>
+<body>
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+</body>
+</html>
