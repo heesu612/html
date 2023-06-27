@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>반복문 2번</title>
+    </head>
+    <body>
+        <h2>반복문 2번</h2>
+        <script>
+            // 문제 1. 1부터 10까지 1씩 증가하는 수를 출력하시오.
+            /*
+            let i = 1;
+            do {
+                console.log(i);
+                i++;
+            } while(i <= 10);
+            */
+            // 문제 2. 10부터 1까지 1씩 감소하는 수를 출력
+            /*
+            let i = 10;
+            do {
+                console.log(i);
+                i--;
+            } while(i>0);
+            */
+            // 문제3. 1부터 10까지 2씩 증가하는 수를 출력
+            /*
+            let i = 1;
+            do {
+                console.log(i);
+                i +=2 ; // i = i+ 2;
+            } while(i <=10);
+            */
+            // 문제 4. 1부터 100까지 수 중에서 홀수를 출력하고
+            // 그 합과 개수를 출력하시오
+            /*
+            let i = 1; // 초기값
+            let sum = 0, cnt = 0;
+            do {
+                if(i % 2 == 1) { // 홀수인가를 판별
+                    console.log(i);
+                    sum += i;
+                    ++cnt;
+                }
+                i++; // 증감값
+            } while(i <= 100); // 조건식
+
+            console.log(`합계:${sum}\n개수: ${cnt}`);
+            */
+            
+            // 문제5. 1부터 100까지의 수 중에서 3의 배수이면서 4의 배수를 출력하고,
+            // 그 합과 개수를 출력.
+            let i = 1; // 초기값
+            let sum = 0, cnt = 0;
+            do {
+                if(i%3==0 && i%4==0){ // 3의 배수이면서 4의 배수인지를 판별
+                    console.log(i);
+                    sum += i;
+                    ++cnt;
+                }
+                i++;//증감값
+            } while(i <= 100); // 조건식
+
+            consoel.log(`합계 : ${sum}\n개수: ${cnt}`);
+        </script>
+    </body>
+</html>

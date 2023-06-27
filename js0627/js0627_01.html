@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="Ko">
+<head>
+    <meta charset="UTF-8">
+    <title>조건문 응용 1번</title>
+</head>
+<body>
+    <h2>조건문 응용 1번</h2>
+    <h3>문제1. 입력창으로 월을 입력하고 월에 해당하는 탄생화를 출력하시오</h3>
+    <button onclick="func1()">월별 탄생화 확인</button>
+    <script>
+        // 출력화면 설게: 당신이 태어난 월은 6월이고, 탄생화는 백합입니다.
+        // switch~case문
+        function func1(){
+
+            const month = Number(prompt("당신이 태어난 월을 입력하세요."));
+            let flower;
+
+            switch(month) {
+                case 1:
+                    flower = "히아신스";
+                    break;
+                case 2:
+                    flower = "물망초";
+                    break;
+                case 3:
+                    flower = "수레국화";
+                    break;
+                case 4:
+                    flower = "금잔화";
+                    break;
+                case 5:
+                    flower = "민들레";
+                    break;
+                case 6:
+                    flower = "장미";
+                    break;
+                case 7:
+                    flower = "금어초";
+                    break;
+                case 8:
+                    flower = "토끼풀";
+                    break;
+                case 9:
+                    flower = "용담";
+                    break;
+                case 10:
+                    flower = "국화";
+                    break;
+                case 11:
+                    flower = "루피너스";
+                    break;
+                case 12:
+                    flower = "박하";
+                    break;
+            }
+        document.write(`당신이 태어난 월은 ${month}월이고, 탄생화는 ${flower}입니다.`);
+        }
+    </script>
+    <h3>문제2. 현재 시간에 맞는 문자를 알림창으로 출력하시오.</h3>
+    <button onclick="func2()">일정 알림</button>
+    <script>
+        /*
+        출력화면 설계: 
+        11시 이전 -> 11시가 지났습니다. 아침 운동을 하세요
+        15시 이전 -> 15시가 지났습니다.점심을 드세요
+        18시 이전 -> 18시가 지났습니다.업무를 정리하고 퇴근하세요.
+        23시 이전 -> 23시가 지났습니다. 이제 잠자리에 들 시간입니다.
+        */
+        // if문 형태로 작성.
+        function func2(){
+            const date = new Date(); // 현재 시스템의 날짜와 시간 정보를 얻어옴.
+            const hour = date.getHours(); // 현재 시간을 저장
+
+            if (hour <= 11) {
+                document.write(hour+"시가 지났습니다. 아침운동을 하세요.");
+            } else if (hour <= 15) {
+                document.write(hour+"시가 지났습니다. 점심을 드세요.");
+            } else if (hour <= 18) {
+                document.write(hour+"시가 지났습니다. 업무를 정리하고 퇴근하세요.");
+            } else if (hour <= 15) {
+                document.write(hour+"시가 지났습니다. 이제 잠자리에 들 시간입니다.");
+            }
+        }
+    </script>
+</body>
+</html>

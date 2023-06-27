@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>반복문 5번</title>
+    </head>
+    <body>
+        <h3>반복문 5번</h3>
+        <h4>break문과 continue문</h4>
+        <script>
+            // 1. break문의 사용
+            /*
+            let i = 1;
+            while(i <= 10){
+                if(i==6) { // i가 6이 되면 참.
+                    break;
+                }
+                console.log(i);
+                i++;
+            }
+            */
+
+            // 2. continue문
+            /*
+            for(let i=1;i<=10;i++) {
+                if(i == 6) {
+                    continue;
+                }
+                console.log(i);
+                i++;
+            }
+            */
+
+            // 문제 1) 1부터 100까지의 정수 중에서 3의 배수만 제외하고 출력하시오.
+            for(let i = 1;i <= 10; i++) {
+                if(i%3 == 0) {
+                    continue;
+                }
+                console.log(i);
+            }
+        </script>
+    </body>
+</html>

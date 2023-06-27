@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>조건문 5번</title>
+    </head>
+    <body>
+        <h3>문제 1. 월을 입력하여 계절을 판별하시오.</h3>
+        <button onclick="func1()">계절 판별</button>
+        <hr>
+        <script>
+            function func1() {
+                /*
+                let num = Number(prompt("숫자를 입력"));
+                let season;
+                switch(num){
+                    case (num == 3 || num == 4 || num == 5) :
+                        season = "봄";
+                        break;
+                    
+                    case (num == 6 || num == 7 || num == 8) :
+                        season = "여름";
+                        break;
+                    
+                    case (num == 9 || num == 10 || num == 11) :
+                        season = "가을";
+                        break;
+
+                    case (num == 12 || num == 1 || num == 2) :
+                        season = "겨울";
+                        break;
+                        
+                    default :
+                        document.write("맞는 숫자가 아닙니다.");
+                        break;
+                }
+                document.write(`${num}월은/는 ${season}입니다.`);
+                */
+
+                /*
+                let month = Number(prompt("월을 입력"));
+                let season;
+                switch(month){
+                    case 3: //이렇게 하거나 case 3: case 4: case 5: 처럼 한줄로 써도 상관없다.
+                    case 4:kf
+                    case 5:
+                        season ="봄";
+                        break;
+                    case 6:
+                    case 7:
+                    case 8:
+                        season="여름";
+                        break;
+                    case 9:
+                    case 10:
+                    case 11:
+                        season="가을";
+                        break;
+                    case 12:
+                    case 1:
+                    case 2:
+                        season="겨울";
+                        break;
+
+                }
+                document.write(`${month}월은/는 ${season}입니다.`);
+                */
+                // 위의 코딩에서 세개를 한줄로 옮긴것.
+                //조건의 가짓수가 3가지 이상이고 정수로 떨어지면 switch문을 쓰는것이 좋다.
+                let month = Number(prompt("월을 입력"));
+                let season;
+                switch(month){
+                    case 3: case 4: case 5:
+                        season ="봄";
+                        break;
+                    case 6: case 7: case 8:
+                        season="여름";
+                        break;
+                    case 9: case 10: case 11:
+                        season="가을";
+                        break;
+                    case 12: case 1: case 2:
+                        season="겨울";
+                        break;
+
+                }
+                document.write(`${month}월은/는 ${season}입니다.`);
+                
+                }
+        </script>
+
+        <h3>문제 2. 학생이름, 국어점수, 영어점수, 수학점수를 입력하여, 평균과 학점을 출력</h3>
+        <button onclick="func2()">학점 계산</button>
+        <script>
+            function func2() {
+                let name = prompt("학생의 이름을 입력하세요.");
+                let ko_score = Number(prompt(name +"의 국어점수를 입력하세요."));
+                let en_score = Number(prompt(name +"의 영어점수를 입력하세요."));
+                let ma_score = Number(prompt(name +"의 수학점수를 입력하세요."));
+                let sum1 = (ko_score + en_score + ma_score);
+                let avg1 = Number((sum1/3));
+                document.write(`${name}의 국어점수는 ${ko_score}점, ${name}의 영어점수는 ${en_score}점,
+                    ${name}의 수학점수는 ${ma_score}점입니다.<br> ${name}의 평균점수는 ${avg1.toFixed(2)}입니다.<br>`);
+                
+                    //A: 99, 98, 97, ...90->10의 자리로 학점 판별
+                /*
+                    let grade;
+                    switch(0<avg1) {
+                        case avg1 >=90 :
+                            grade = "A학점";
+                            break;
+                        case avg1 >=80 :
+                            grade = "B학점";
+                            break;
+                        case avg1 >=70 :
+                            grade = "C학점";
+                            break;
+                        case avg1 >=60 :
+                            grade = "D학점";
+                            break;
+                        case avg1 < 60 :
+                            grade = "F학점";
+                            break;
+                    }
+                document.write(`${name}의 학점은 ${grade}입니다.<br>`);
+                //document.write("평균 :" +avg.toFixed(2)) // 소숫점 두번째 자리까지 반올림해서 표현하는 방법.
+            */
+                //A: 99, 98, 97, ...90->10의 자리로 학점 판별
+                // 95/10 -> 9.5
+                // parseInt(): 정수로 변환
+                let grade;
+                switch(parseInt(avg1/10)) {
+                    case 10: case 9:
+                        grade = "A학점";
+                        break;
+                    case 8:
+                        grade = "B학점";
+                        break;
+                    case 7:
+                        grade = "C학점";
+                        break;
+                    case 6:
+                        grade = "D학점";
+                        break;
+                    default:
+                        grade = "F학점";
+                        break;
+                }
+                document.write(`${name}의 학점은 ${grade}입니다.<br>`);
+            }
+        </script>
+    </body>
+</html>
